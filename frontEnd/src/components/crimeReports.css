@@ -1,0 +1,101 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pageTitle {
+    background-color: rgb(11, 102, 11);
+    height: 80px;
+    font-size: 32px;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
+    padding-left: 80px;
+}
+
+.pageContent {
+    background-color: rgb(173, 150, 43);
+    padding: 20px;
+}
+
+.crime-report-all-reports {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.crime-report-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.crime-report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.crime-report-card-title h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.crime-report-card-body {
+    margin-bottom: 10px;
+}
+
+.crime-report-card-body-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    object-fit: cover; 
+}
+
+
+.crime-report-card-body p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.crime-report-card-body-text {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.crime-report-readMoreButton {
+    background-color: #2f5986;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.crime-report-readMoreButton:hover {
+    background-color: #0056b3;
+}
+
+.crime-report-card-footer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    text-align: right;
+}
