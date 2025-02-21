@@ -5,7 +5,12 @@ const {
   createGreenBeck,
 } = require("../controllers/greenBeckController");
 
+const requireAuth = require('../middleware/requireAuth');
+
+
+
 const router = express.Router();
+router.use(requireAuth);
 
 // Get all entries
 router.get("/", getAllGreenBecks);
@@ -17,3 +22,4 @@ router.get("/:id", getSingleGreenBeck);
 router.post("/", createGreenBeck);
 
 module.exports = router;
+
