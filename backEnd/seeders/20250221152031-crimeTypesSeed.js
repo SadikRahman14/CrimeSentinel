@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('CrimeTypes', [
+    await queryInterface.bulkInsert('crimetypes', [
       { id: 1, name: 'Assault', severity_level: 'High', category_id: 1 },
       { id: 2, name: 'Homicide', severity_level: 'Critical', category_id: 1 },
       { id: 3, name: 'Kidnapping', severity_level: 'Critical', category_id: 1 },
@@ -25,6 +25,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('CrimeTypes', null, {});
+    await queryInterface.bulkDelete('crimetypes', null, {});
   }
 };
