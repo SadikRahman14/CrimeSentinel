@@ -3,8 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const sequelize = require("./config/database");
 
+
+
 const greenBeckRoutes = require('./routes/greenBeckRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
+const experimentRoutes = require('./routes/experimentRoutes.js');
 
 const app = express();
 app.use(cors({
@@ -21,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use('/api/greenbeck', greenBeckRoutes);
 app.use('/api/user', userRoutes);
-
+app.use('/api/experiment', experimentRoutes);
 
 
 sequelize.authenticate()

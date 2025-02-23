@@ -25,8 +25,10 @@ const GreenBeck = () => {
       });
 
       setGreenBecks(response.data);
+      console.log("fetched all greenBecks");
     } catch (err) {
       setError(err.response?.data?.error || err.message);
+      console.error("Error fetching greenBecks", error);
     } finally {
       setLoading(false);
     }
