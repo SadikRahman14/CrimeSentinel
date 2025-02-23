@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLogout } from '../hooks/useLogout.jsx';
 import { useAuthContext } from '../hooks/useAuthContext.jsx'
+import Experiment from './experiment.jsx';
 
 const LandingPage = () => {
   const navigate = useNavigate(); 
@@ -24,6 +25,15 @@ const LandingPage = () => {
     navigate('/user/sign-up');
   };
 
+  const goToExperiment = () => {
+    navigate('/experiment');
+  };
+
+  const goToQuery = () => {
+    navigate('/query');
+  };
+
+
   return (
     <div className="landing-page">
       <h1>Crime Sentinel</h1>
@@ -35,6 +45,8 @@ const LandingPage = () => {
             <span>logged in as {user.email} </span>
             <br /><br />
             <button onClick={handleLogout}>Log out</button>
+            <button onClick={goToExperiment}>experiment</button>
+            <button onClick={goToQuery}>query</button>
         </div>
       )}
 
