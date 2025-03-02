@@ -1,0 +1,81 @@
+.recent-crimes {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .recent-crimes h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .recent-crimes p {
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  .view-all {
+    display: block;         /* Full width nibe */
+    text-align: right;     /* Center e niye asbe */
+    color: teal;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;    /* Crime list er theke ektu gap dibe */
+  }
+  
+  
+  .crime-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .crime-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crime-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .crime-icon {
+    font-size: 30px;
+  }
+  
+  .crime-time {
+    background: #c2fbd7;
+    color: #155724;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  
+  .see-more {
+    background: teal;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .see-more:hover {
+    background: #004d4d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .crime-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
