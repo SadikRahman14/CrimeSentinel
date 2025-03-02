@@ -11,7 +11,7 @@ const getAllExperiments = async (req, res) => {
         ct.name AS type_name,
         cc.id AS category_id, 
         cc.name AS category_name
-      FROM crimes c
+      FROM crime c
       LEFT JOIN crimetypes ct ON c.type_id = ct.id
       LEFT JOIN crimecategories cc ON ct.category_id = cc.id`;
 

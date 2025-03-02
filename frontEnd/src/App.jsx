@@ -8,6 +8,9 @@ import Experiment from './pages/experiment.jsx';
 import Login from './pages/login.jsx';
 import SignUp from './pages/signUp.jsx';
 import Query from './pages/query.jsx';
+import Victims from "./pages/Victims.jsx";
+import Offenders from "./pages/Offenders.jsx";
+import Witnesses from "./pages/Witnesses.jsx";
 
 function App() {
 
@@ -22,6 +25,9 @@ function App() {
           <Route path="/greenbeck" element={<GreenBeck />} />
           <Route path="/experiment" element={<Experiment />} />
           <Route path="/query" element={<Query />} />
+          <Route path="/victims" element={<Victims />} />
+          <Route path="/offenders" element={<Offenders />} />
+          <Route path="/witnesses" element={<Witnesses  />}/>
       </Routes>
     </>
   )
