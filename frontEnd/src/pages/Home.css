@@ -1,0 +1,78 @@
+.home-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002b36;
+    color: white;
+    padding: 15px 30px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .register {
+    background-color: green;
+    color: white;
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../assets/images/background.jpg') no-repeat center center/cover;
+    color: white;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .search-bar input, .search-bar select, .search-bar button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  
+  .stat-box {
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .stat-label {
+    display: block;
+    margin-top: 5px;
+    color: gray;
+  }
+  
