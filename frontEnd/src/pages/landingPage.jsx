@@ -9,7 +9,7 @@ const LandingPage = () => {
   const { user } = useAuthContext();
 
   const goToGreenbeck = () => {
-    navigate('/greenbeck');
+    navigate('/practice');
   };
 
   const handleLogout = () => {

@@ -5,7 +5,8 @@ const sequelize = require("./config/database");
 
 const greenBeckRoutes = require('./routes/greenBeckRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
-
+const practiceRoutes = require('./routes/practiceRoutes.js');
+const graphRoutes = require('./routes/graphRoutes.js');
 const app = express();
 app.use(cors({
     origin: 'http://localhost:5173'  
@@ -21,6 +22,8 @@ app.use((req, res, next) => {
 
 app.use('/api/greenbeck', greenBeckRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/practice', practiceRoutes);
+app.use('/api/graph', graphRoutes);
 
 
 
