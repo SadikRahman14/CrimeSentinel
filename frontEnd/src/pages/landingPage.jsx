@@ -33,6 +33,10 @@ const LandingPage = () => {
     navigate('/query');
   };
 
+  const goToReports = () => {
+    navigate('/reports');
+  };
+
 
   return (
     <div className="landing-page">
@@ -47,6 +51,7 @@ const LandingPage = () => {
             <button onClick={handleLogout}>Log out</button>
             <button onClick={goToExperiment}>experiment</button>
             <button onClick={goToQuery}>query</button>
+            <button onClick={goToReports}>reports</button>
         </div>
       )}
 

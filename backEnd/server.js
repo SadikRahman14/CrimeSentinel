@@ -15,6 +15,7 @@ const graphRoutes = require('./routes/graphRoutes.js');
 
 const experimentRoutes = require('./routes/experimentRoutes.js');
 const queryRoutes = require('./routes/queryRoutes.js');
+const reportRoutes = require('./routes/reportRoutes.js');
 
 const analyticsRoutes = require('./routes/analyticsRoutes'); 
 
@@ -43,6 +44,7 @@ app.use('/api/graph', graphRoutes);
 
 app.use('/api/experiment', experimentRoutes);
 app.use('/api/query', queryRoutes);
+app.use('/api/reports', reportRoutes);
 
 
 sequelize.authenticate()

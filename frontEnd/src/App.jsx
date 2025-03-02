@@ -7,6 +7,9 @@ import Experiments from './pages/graph.jsx';
 import Experimentt from './pages/case.jsx';
 import Login from './pages/login.jsx';
 import SignUp from './pages/signUp.jsx';
+import Query from './pages/query.jsx';
+import Reports from './pages/reports.jsx';
+import ReportDetails from './pages/singleReport.jsx';
 
 import Victims from "./pages/Victims";
 import Offenders from "./pages/Offenders";  
@@ -30,16 +33,15 @@ function App() {
           <Route path="/case" element={<Experimentt />} />
           <Route path="/HeatMap" element={<HeatMap />} />
 
-
           <Route path="/experiment" element={<Experiment />} />
           <Route path="/query" element={<Query />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/reports/:id" element={<ReportDetails />} />
           <Route path="/victims" element={<Victims />} />
           <Route path="/offenders" element={<Offenders />} />
           <Route path="/witnesses" element={<Witnesses />} />
           <Route path="/analytics" element={<Analytics />} />
-
           <Route path="/crime-cases" element={<CrimeCases />} />  
-
       </Routes>
     </>
   );

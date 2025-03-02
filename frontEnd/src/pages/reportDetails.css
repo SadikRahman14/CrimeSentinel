@@ -1,0 +1,33 @@
+/* ReportDetails.css */
+.report-details-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-details-container h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .report-details p {
+    font-size: 16px;
+    color: #343a40;
+    margin: 8px 0;
+  }
+  
+  .report-details p strong {
+    color: #495057;
+  }
+  
+  .loading-message {
+    text-align: center;
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 50px;
+  }
+  
