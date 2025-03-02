@@ -1,0 +1,142 @@
+/* General Styles
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  } */
+
+  .reports-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+  
+  .reports-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+ .all-reports-title {
+    text-align: center;
+    color: #0f0f10;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-section select {
+    flex: 1 1 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  .filter-section select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .filter-section button {
+    flex: 1 1 100px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-section button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Reports List */
+  .reports-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .report-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .report-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .report-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .report-item p {
+    margin: 0 0 15px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .view-button {
+    padding: 8px 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .filter-section {
+      flex-direction: column;
+    }
+  
+    .filter-section select,
+    .filter-section button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .report-item {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
