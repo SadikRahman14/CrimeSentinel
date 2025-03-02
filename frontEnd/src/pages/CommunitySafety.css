@@ -1,0 +1,90 @@
+.community-safety {
+    padding: 50px;
+    background-color: #f5fafa;
+  }
+  
+  .safety-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .safety-content {
+    max-width: 50%;
+  }
+  
+  .safety-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .safety-content p {
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .safety-buttons {
+    margin-top: 15px;
+  }
+  
+  .safety-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .search-crime {
+    background-color: teal;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .learn-more {
+    background-color: transparent;
+    color: teal;
+    border: 1px solid teal;
+  }
+  
+  .safety-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .safety-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.8rem;
+    color: teal;
+  }
+  
+  .stat-item p {
+    color: #777;
+  }
+  
+  .safety-banner {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .banner-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
