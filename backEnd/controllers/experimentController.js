@@ -1,43 +1,57 @@
 const db = require("../config/database");
 
-const getAllExperiments = async (req, res) => {
+const getAnalyticsData = async (req, res) => {
   try {
-    const firstQuery = 
-    `SELECT  
-        c.id AS crime_id,
-        c.date AS crime_date,
-        c.status AS crime_status,
-        ct.id AS type_id, 
-        ct.name AS type_name,
-        cc.id AS category_id, 
-        cc.name AS category_name
-      FROM crimes c
-      LEFT JOIN crimetypes ct ON c.type_id = ct.id
-      LEFT JOIN crimecategories cc ON ct.category_id = cc.id`;
+    const topCrimeCategoryQuery = `
+      SELECT cc.name AS category_name, COUNT(co.id) AS total_offenders
+      FROM crime_offender co
+      JOIN crime c ON co.crime_id = c.id
+      JOIN crimetypes ct ON c.crime_type_id = ct.id
+      JOIN crimecategories cc ON ct.category_id = cc.id
+      GROUP BY cc.name
+      ORDER BY total_offenders DESC
+      LIMIT 1;
+    `;
 
-    const secondQuery = 
-    `SELECT 
-        ct.id AS type_id, 
-        ct.name AS type_name, 
-        cc.id AS category_id, 
-        cc.name AS category_name
-      FROM crimetypes ct
-      LEFT JOIN crimecategories cc ON ct.category_id = cc.id`;
+    const dangerousLocationsQuery = `
+      SELECT l.region, COUNT(c.id) AS total_crimes
+      FROM crime c
+      JOIN location l ON c.location_id = l.id
+      GROUP BY l.region
+      ORDER BY total_crimes DESC
+      LIMIT 5;
+    `;
 
-    const [firstResults] = await db.query(firstQuery);
-    const [secondResults] = await db.query(secondQuery);
+    const fugitivesQuery = `
+      SELECT name, age, gender, status
+      FROM crime_offender
+      WHERE status = 'fugitive'
+      ORDER BY age DESC;
+    `;
 
+    // Execute queries
+    const [topCrimeCategory] = await db.query(topCrimeCategoryQuery);
+    const [dangerousLocations] = await db.query(dangerousLocationsQuery);
+    const [fugitives] = await db.query(fugitivesQuery);
+
+    // Send response in the required format
     res.json({
-      sql: { firstQuery, secondQuery },
+      sql: {
+        topCrimeCategoryQuery,
+        dangerousLocationsQuery,
+        fugitivesQuery
+      },
       data: {
-        firstTable: firstResults,
-        secondTable: secondResults
+        topCrimeCategory,
+        dangerousLocations,
+        fugitives
       }
     });
+
   } catch (error) {
-    console.error("Error executing query:", error);
+    console.error("Error executing analytics queries:", error);
     res.status(500).json({ error: error.message });
   }
 };
 
-module.exports = { getAllExperiments };
+module.exports = { getAnalyticsData };

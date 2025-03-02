@@ -12,8 +12,8 @@ const getAllExperiments = async (req, res) => {
     cc.latitude AS latitude,
     ct.id = cc.region_id
 
-  FROM regions ct
-  LEFT JOIN locations cc ON ct.id = cc.region_id`;
+  FROM region ct
+  LEFT JOIN location cc ON ct.id = cc.region_id`;
 
     const secondQuery = 
     `SELECT 
@@ -24,8 +24,8 @@ const getAllExperiments = async (req, res) => {
         cc.longitude AS longitude,
        cc.latitude AS latitude,
        ct.id = cc.region_id
-      FROM regions ct
-      LEFT JOIN locations cc ON ct.id = cc.region_id`;
+      FROM region ct
+      LEFT JOIN location cc ON ct.id = cc.region_id`;
 
     const [firstResults] = await db.query(firstQuery);
     const [secondResults] = await db.query(secondQuery);
