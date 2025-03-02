@@ -7,8 +7,15 @@ import Experiments from './pages/graph.jsx';
 import Experimentt from './pages/case.jsx';
 import Login from './pages/login.jsx';
 import SignUp from './pages/signUp.jsx';
+
+import Victims from "./pages/Victims";
+import Offenders from "./pages/Offenders";  
+import Witnesses from "./pages/Witnesses";
+import Analytics from './pages/Analytics';
+
+
 import HeatMap from "./pages/HeatMap";
-import CrimeCases from "./pages/CrimeCases";  // CrimeCases import করা হলো ✅
+import CrimeCases from "./pages/CrimeCases"; 
 
 function App() {
   return (
@@ -22,7 +29,17 @@ function App() {
           <Route path="/graph" element={<Experiments />} />
           <Route path="/case" element={<Experimentt />} />
           <Route path="/HeatMap" element={<HeatMap />} />
+
+
+          <Route path="/experiment" element={<Experiment />} />
+          <Route path="/query" element={<Query />} />
+          <Route path="/victims" element={<Victims />} />
+          <Route path="/offenders" element={<Offenders />} />
+          <Route path="/witnesses" element={<Witnesses />} />
+          <Route path="/analytics" element={<Analytics />} />
+
           <Route path="/crime-cases" element={<CrimeCases />} />  
+
       </Routes>
     </>
   );

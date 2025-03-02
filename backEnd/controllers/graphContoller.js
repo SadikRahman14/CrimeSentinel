@@ -6,7 +6,7 @@ const getAllGraph = async (req, res) => {
     `SELECT 
         l.name AS location_name, 
         (SELECT COUNT(*) FROM crime c WHERE c.location_id = l.id) AS total_crimes
-     FROM locations l
+     FROM location l
      ORDER BY total_crimes DESC
      Limit 5`;
 
@@ -14,7 +14,7 @@ const getAllGraph = async (req, res) => {
     `SELECT 
         r.name AS region_name, 
         (SELECT COUNT(*) FROM crime c 
-         JOIN locations l ON c.location_id = l.id 
+         JOIN location l ON c.location_id = l.id 
          WHERE l.region_id = r.id) AS total_crimes
      FROM region r
      ORDER BY total_crimes DESC
@@ -28,7 +28,7 @@ const getAllGraph = async (req, res) => {
             RANK() OVER (ORDER BY COUNT(c.id) DESC) AS rank_position
         FROM station s
         JOIN region r ON s.region_id = r.id
-        JOIN locations l ON l.region_id = r.id
+        JOIN location l ON l.region_id = r.id
         JOIN crime c ON c.location_id = l.id
         GROUP BY s.name
     )
